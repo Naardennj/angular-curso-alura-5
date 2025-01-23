@@ -8,7 +8,7 @@ import { Tarefa } from '../interface/tarefa';
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
-  styleUrls: ['./lista-tarefas.component.css']
+  styleUrls: ['./lista-tarefas.component.css'],
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];

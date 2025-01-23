@@ -16,16 +16,16 @@ import { MensagemComponent } from './componentes/mensagem/mensagem.component';
     ListaTarefasComponent,
     CabecalhoComponent,
     MensagemComponent,
-    RodapeComponent
+    RodapeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

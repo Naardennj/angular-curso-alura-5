@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 24px 0;
   width: 100%;
-  position:relative;
+  position: relative;
   margin-top: 24px;
   background: #263238;
   bottom: 0;
@@ -13,7 +13,7 @@
 footer {
   text-align: center;
   font-size: 18px;
-  color: #EBEBEB;
+  color: #ebebeb;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
