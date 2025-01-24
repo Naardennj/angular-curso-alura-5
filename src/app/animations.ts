@@ -16,7 +16,7 @@ export const highlightedStateTrigger = trigger('highlightedState', [
     animate(
       '200ms ease-out',
       style({
-        trasnforrm: 'scale(1.02)',
+        transform: 'scale(1.02)',
       })
     ),
     animate(200),
@@ -30,3 +30,12 @@ export const shownStateTrigger = trigger('shownState', [
   ]),
   transition(':leave', [animate(300, style({ opacity: 0 }))]),
 ]);
+
+export const checkButtonTrrigger = trigger('checkButton',[
+  transition('* => checked',[
+    animate('400ms ease-in', style({
+      transform: 'scale(0.4)'
+    }))
+  ])
+]
+)
