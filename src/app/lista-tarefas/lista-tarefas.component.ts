@@ -5,8 +5,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
 import {
-  checkButtonTrrigger,
+  checkButtonTrigger,
   filterTrigger,
+  flyInOutTrigger,
+  formButtonTrigger,
   highlightedStateTrigger,
   shownStateTrigger,
 } from '../animations';
@@ -18,8 +20,10 @@ import {
   animations: [
     highlightedStateTrigger,
     shownStateTrigger,
-    checkButtonTrrigger,
+    checkButtonTrigger,
     filterTrigger,
+    formButtonTrigger,
+    flyInOutTrigger
   ],
 })
 export class ListaTarefasComponent implements OnInit {
@@ -27,9 +31,9 @@ export class ListaTarefasComponent implements OnInit {
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
-  indexTarefa = -1;
+  indexTarefa: number = -1;
   id: number = 0;
-  campoBusca: string = '';
+  campoBusca = '';
   tarefasFiltradas: Tarefa[] = [];
 
   formulario: FormGroup = this.fomBuilder.group({
