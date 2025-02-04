@@ -26,7 +26,7 @@
       formControlName="prioridade"
       [ngClass]="campoValidado('prioridade')"
     >
-      <option disabled value="">Selecione</option>
+      <option value="">Selecione</option>
       <option value="Alta">Alta</option>
       <option value="Normal">Normal</option>
       <option value="Baixa">Baixa</option>
@@ -39,7 +39,7 @@
       formControlName="categoria"
       [ngClass]="campoValidado('categoria')"
     >
-      <option disabled value="">Selecione</option>
+      <option value="">Selecione</option>
       <option value="Casa">Casa</option>
       <option value="Trabalho">Trabalho</option>
       <option value="Estudos">Estudos</option>
@@ -106,8 +106,8 @@
                 ? 'icone-checked'
                 : 'icone-unchecked'
             "
-            (click)="finalizarTarefa(tarefa.id)"
-            [@checkButton]="tarefa.id === id ? 'checked' : 'unchecked'"
+            (click)="finalizarTarefa(tarefa)"
+            [@checkButton]="tarefa.id === id && estadoBotao"
           ></button>
         </p>
       </div>
@@ -131,7 +131,5 @@
   </div>
 </section>
 <ng-template #semTarefas>
-  <p @flyInOut class="ng-template ff-prompt">
-    Olá! Ainda não há tarefas por aqui!
-  </p>
+  <p class="ng-template ff-prompt">Olá! Ainda não há tarefas por aqui! :)</p>
 </ng-template>
